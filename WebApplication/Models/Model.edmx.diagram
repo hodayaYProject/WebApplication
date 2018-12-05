@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="074af07dbb5e4c2488d4a838927a7b08" Name="Diagram1">
+        <EntityTypeShape EntityType="FilesSearchDBModel.Category" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilesSearchDBModel.Permission" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilesSearchDBModel.Resource" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilesSearchDBModel.sysdiagram" Width="1.5" PointX="2.875" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilesSearchDBModel.Usere" Width="1.5" PointX="5.125" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="FilesSearchDBModel.ResourceOfCategory" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
