@@ -131,3 +131,4 @@ D:\malkiProject\WebApplication\WebApplication\bin\System.Net.Http.Formatting.xml
 D:\malkiProject\WebApplication\WebApplication\bin\System.Web.Http.xml
 D:\malkiProject\WebApplication\WebApplication\bin\System.Web.Http.WebHost.xml
 D:\malkiProject\WebApplication\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\malkiProject\WebApplication\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
