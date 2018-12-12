@@ -66,3 +66,6 @@ C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplication\obj\Debug\WebApp
 C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplication\obj\Debug\WebApplication.csproj.CopyComplete
 C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplication\obj\Debug\WebApplication.pdb
+D:\malkiProject\WebApplication\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+D:\malkiProject\WebApplication\WebApplication\obj\Debug\WebApplication.dll
+D:\malkiProject\WebApplication\WebApplication\obj\Debug\WebApplication.pdb
