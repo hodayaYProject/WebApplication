@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SourceNetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categoryCode" />
+    </Key>
+    <Property Name="categoryCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="parentCategory" Type="Int32" />
+    <NavigationProperty Name="Resources" Relationship="Self.ResourceCategory" FromRole="Categories" ToRole="Resources" />
+  </EntityType>
+  <EntityType Name="Permission">
+    <Key>
+      <PropertyRef Name="permissionsCode" />
+    </Key>
+    <Property Name="permissionsCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="permissionsType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Permissions" FromRole="Permissions" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="ResourcePermission">
+    <Key>
+      <PropertyRef Name="ResourcePermisCode" />
+    </Key>
+    <Property Name="ResourcePermisCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResourcePermisType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Resources" Relationship="Self.FK_Resources_ResourcePermissions" FromRole="ResourcePermissions" ToRole="Resources" />
+  </EntityType>
+  <EntityType Name="Resource">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+    </Key>
+    <Property Name="resourceCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="filePath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="version" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="authorName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="resourcePermission" Type="Int32" />
+    <NavigationProperty Name="ResourcePermission1" Relationship="Self.FK_Resources_ResourcePermissions" FromRole="Resources" ToRole="ResourcePermissions" />
+    <NavigationProperty Name="Categories" Relationship="Self.ResourceCategory" FromRole="Resources" ToRole="Categories" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userCode" />
+    </Key>
+    <Property Name="userCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="permissionCode" Type="Int32" />
+    <NavigationProperty Name="Permission" Relationship="Self.FK_Users_Permissions" FromRole="Users" ToRole="Permissions" />
+  </EntityType>
+  <Association Name="FK_Users_Permissions">
+    <End Role="Permissions" Type="Self.Permission" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permissions">
+        <PropertyRef Name="permissionsCode" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="permissionCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resources_ResourcePermissions">
+    <End Role="ResourcePermissions" Type="Self.ResourcePermission" Multiplicity="0..1" />
+    <End Role="Resources" Type="Self.Resource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResourcePermissions">
+        <PropertyRef Name="ResourcePermisCode" />
+      </Principal>
+      <Dependent Role="Resources">
+        <PropertyRef Name="resourcePermission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ResourceCategory">
+    <End Role="Categories" Type="Self.Category" Multiplicity="*" />
+    <End Role="Resources" Type="Self.Resource" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="SourceNetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Permissions" EntityType="Self.Permission" />
+    <EntitySet Name="ResourcePermissions" EntityType="Self.ResourcePermission" />
+    <EntitySet Name="Resources" EntityType="Self.Resource" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Users_Permissions" Association="Self.FK_Users_Permissions">
+      <End Role="Permissions" EntitySet="Permissions" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resources_ResourcePermissions" Association="Self.FK_Resources_ResourcePermissions">
+      <End Role="ResourcePermissions" EntitySet="ResourcePermissions" />
+      <End Role="Resources" EntitySet="Resources" />
+    </AssociationSet>
+    <AssociationSet Name="ResourceCategory" Association="Self.ResourceCategory">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Resources" EntitySet="Resources" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

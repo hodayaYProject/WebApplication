@@ -14,7 +14,7 @@ namespace WebApplication.Controllers
 {
     public class PermissionsController : ApiController
     {
-        private FilesSearchDBEntities db = new FilesSearchDBEntities();
+        private SourceNetEntities db = new SourceNetEntities();
 
         // GET: api/Permissions
         public IQueryable<Permission> GetPermissions()
@@ -44,7 +44,7 @@ namespace WebApplication.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != permission.KodP)
+            if (id != permission.permissionsCode)
             {
                 return BadRequest();
             }
@@ -80,24 +80,9 @@ namespace WebApplication.Controllers
             }
 
             db.Permissions.Add(permission);
+            db.SaveChanges();
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (PermissionExists(permission.KodP))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = permission.KodP }, permission);
+            return CreatedAtRoute("DefaultApi", new { id = permission.permissionsCode }, permission);
         }
 
         // DELETE: api/Permissions/5
@@ -127,7 +112,7 @@ namespace WebApplication.Controllers
 
         private bool PermissionExists(int id)
         {
-            return db.Permissions.Count(e => e.KodP == id) > 0;
+            return db.Permissions.Count(e => e.permissionsCode == id) > 0;
         }
     }
 }
