@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <select id="soflow-color" (change)="ChangingValue(sel.value)" #sel>
+      <option value="0" disabled selected>מיין לפי</option>
+      <option value="1">שם קובץ</option>
+      <option value="2">תג</option>
+      <option value="3">סוג קובץ</option>
+      <option value="4">תאריך</option>
+    </select>
+  </div>
+  <div dir="rtl" class="row">
+    <app-search-by-date *ngIf="selectSearchBydate" (removeSearchByDate)="removeDate()"  class="col-sm-6 col-lg-3"></app-search-by-date>
+    <app-search-by-tag *ngIf="selectSearchBytag" (removeSearchByTag)="removeTag()" class="col-sm-6 col-lg-3"></app-search-by-tag>
+    <app-search-by-name *ngIf="selectSearchByname" (removeSearchByName)="removeName()" class="col-sm-6 col-lg-3"></app-search-by-name>
+    <app-search-by-type *ngIf="selectSearchBytype" (removeSearchByType)="removeType()" class="col-sm-6 col-lg-3"></app-search-by-type>
+  </div>
+</div>

@@ -3,10 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SearchComponent } from './search/search.component';
+import { SearchByNameComponent } from './search/SearchBy/search-by-name/search-by-name.component';
+import { SearchByTagComponent } from './search/SearchBy/search-by-tag/search-by-tag.component';
+import { SearchByDateComponent } from './search/SearchBy/search-by-date/search-by-date.component';
+import { SearchByTypeComponent } from './search/SearchBy/search-by-type/search-by-type.component';
+import { UploadComponent } from './upload/upload.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    SearchByNameComponent,
+    SearchByTagComponent,
+    SearchByDateComponent,
+    SearchByTypeComponent,
+    UploadComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
