@@ -12,4 +12,14 @@ export class UploadComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  options = [
+    { name: "צפיה", value: 1 },
+    { name: "הורדה", value: 2 },
+    { name: "עריכה", value: 2 }
+  ]
+
+  selectPermission(value:string){
+  }
+
 }
