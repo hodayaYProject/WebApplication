@@ -1,12 +1,28 @@
 <div  class="container">
+    <form dir="rtl">
 
-    <input dir="rtl" type="file" class="form-control col-sm-3" id="upload" accept="">
+        <div class="form-group row">
+            <label class="col-sm-2">הוסף קובץ</label>
+            <input dir="rtl" type="file" class="form-control col-sm-3" id="upload" accept="">
+        </div>
 
-    <select id="soflow-color" class="form-control col-sm-3" (change)="selectPermission(sel.value)" #sel>
-        <option *ngFor="let o of options">
-            {{o.name}}
-        </option>
-      </select>
-      
+        <div class="form-group row">
+            <label class="col-sm-2">סוג הרשאה</label>
+            <select id="soflow-color" class="form-control col-sm-3" (change)="selectPermission(sel.value)" #sel>
+                <option *ngFor="let o of options">
+                    {{o.name}}
+                </option>
+            </select>
+        </div>
 
+        <div class="form-group row">
+            <label class="col-sm-2">בחר קטגוריה</label>
+            <select id="soflow-color" class="form-control col-sm-3">
+                <option *ngFor="let o of options">
+                </option>
+            </select>
+        </div>
+
+        <button type="button" class="btn btn-lg">הוסף קובץ</button>
+    </form>
 </div>

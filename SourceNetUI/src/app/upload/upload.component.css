@@ -8,22 +8,28 @@
     padding: 20px;
 }
 #upload{
-    margin-left: 70%;
-    margin-top: 10px;
-    background-color: #d86d16;
-    color: #ffffff;
+    /*margin-left: 70%;
+    margin-top: 10px;*/
+    background-color: #ffffff;
+    color: #d86d16;
 }
-#soflow-color{
-    margin-top: 20px;
-    margin-left: 81%;
- }
+
+label{
+    color: #d86d16;
+    padding-top: 5px;
+    font-size: 12pt;
+}
+
+.btn{
+    background-color:#d86d16;
+}
  
  /* -------------------- Colors: Background */
- .green   { background-color: #d86d16; }
+ .green   { background-color: #fff; }
  
  
  /* -------------------- Colors: Text */
- .green select   { color: #fff; }
+ .green select   { color: #d86d16; }
  
  select#soflow, select#soflow-color {
     -webkit-appearance: button;
@@ -46,11 +52,13 @@
  }
  
  select#soflow-color {
-    color: #fff;
-    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#d86d16, #d86d16 40%, #d86d16);
-    background-color: #d86d16;
+    color: #d86d16;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#ffffff, #ffffff 40%, #ffffff);
+    /*background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#d86d16, #d86d16 40%, #d86d16);*/
+    background-color:#fff;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 5px;
     padding-left: 15px;
+    padding-right: 45px;
  }
