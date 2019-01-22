@@ -15,6 +15,47 @@ export class SearchComponent implements OnInit {
   selectSearchBytag: boolean=false;
   selectSearchByname: boolean=false;
   selectSearchBytype: boolean=false;
+  viewSingelFile:boolean=false;
+  SelectedFile:File;
+
+  resource:File[]=[
+    {
+    resourceCode: 1,
+    resourceName:'aaa.jpg',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:2
+  },
+  {
+    resourceCode: 2,
+    resourceName:'bbb.pdf',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:3
+  },
+  {
+    resourceCode: 3,
+    resourceName:'aaa.docx',
+    filePath:'s4t4c',
+    version:'ewfwrferfe',
+    authorName:'dfsdfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:1
+  },
+  {
+    resourceCode: 4,
+    resourceName:'ccc.nyy',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:2
+  }
+];
 
   ChangingValue(value:string){
     switch(value) { 
@@ -52,4 +93,24 @@ export class SearchComponent implements OnInit {
   removeType(){
     this.selectSearchBytype=false;
   }
+
+  showFiles(){
+
+  }
+  singelFile(res:any){
+    this.viewSingelFile=true;
+    this.SelectedFile=res;
+    
+  }
+
+
+}
+export class File{
+  resourceCode: number;
+  resourceName:string;
+  filePath:string;
+  version:string;
+  authorName:string;
+  date:Date;
+  resourcePermission:number;
 }

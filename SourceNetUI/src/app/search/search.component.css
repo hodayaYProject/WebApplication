@@ -15,10 +15,20 @@ label{
     font-size: 12pt;
 }
 
-#soflow-color{
-  /* margin-top: 20px;
-    margin-left: 80%;*/
+p{
+    color: black;
+    text-align:right; 
 }
+
+.file{
+    margin: 0 5px;
+    /*border-style: solid;
+    
+    border-color: #d86d16*/
+
+}
+
+
  /* -------------------- Colors: Background */
  .green   { background-color: #fff; }
  

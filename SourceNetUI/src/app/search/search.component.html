@@ -17,5 +17,20 @@
         <app-search-by-name *ngIf="selectSearchByname" (removeSearchByName)="removeName()" class="col-sm-6 col-lg-3"></app-search-by-name>
         <app-search-by-type *ngIf="selectSearchBytype" (removeSearchByType)="removeType()" class="col-sm-6 col-lg-3"></app-search-by-type>
       </div>
+
+      <div dir="ltr" class="row">
+        <button type="button" class="btn btn-lg" (click)="showFiles()">הצג תוצאות</button>
+      </div>
+
+      <div dir="rtl" class="row">
+        <div *ngFor="let res of resource" class="file">
+            <button type="button" (click)="singelFile(res)">
+                <p>{{res.resourceName}}</p>
+                <img src="../pictures/pdf.jpg" width="200"/>
+            </button>
+        </div>
+      </div>
     </form>
 </div>
+
+<app-view-singel-file *ngIf="viewSingelFile" [SingelFile]="SelectedFile"></app-view-singel-file>

@@ -10,6 +10,7 @@ import { SearchByDateComponent } from './search/SearchBy/search-by-date/search-b
 import { SearchByTypeComponent } from './search/SearchBy/search-by-type/search-by-type.component';
 import { UploadComponent } from './upload/upload.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { ViewSingelFileComponent } from './search/view-singel-file/view-singel-file.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddUserComponent } from './add-user/add-user.component';
     SearchByDateComponent,
     SearchByTypeComponent,
     UploadComponent,
-    AddUserComponent
+    AddUserComponent,
+    ViewSingelFileComponent
   ],
   imports: [
     BrowserModule,
