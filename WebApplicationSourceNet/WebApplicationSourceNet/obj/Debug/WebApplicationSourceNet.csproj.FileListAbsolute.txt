@@ -88,3 +88,6 @@ C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplicationSourceNet\WebAppl
 C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplicationSourceNet\WebApplicationSourceNet\obj\Debug\WebApplicationSourceNet.csproj.CopyComplete
 C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplicationSourceNet\WebApplicationSourceNet\obj\Debug\WebApplicationSourceNet.dll
 C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplicationSourceNet\WebApplicationSourceNet\obj\Debug\WebApplicationSourceNet.pdb
+C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplicationSourceNet\WebApplicationSourceNet\bin\System.Web.Cors.dll
+C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplicationSourceNet\WebApplicationSourceNet\bin\System.Web.Http.Cors.dll
+C:\Users\Hodaya\Desktop\MYProject\WebApplication\WebApplicationSourceNet\WebApplicationSourceNet\bin\System.Web.Http.Cors.xml
