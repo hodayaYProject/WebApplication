@@ -11,6 +11,7 @@ import { SearchByTypeComponent } from './search/SearchBy/search-by-type/search-b
 import { UploadComponent } from './upload/upload.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { ViewSingelFileComponent } from './search/view-singel-file/view-singel-file.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ViewSingelFileComponent } from './search/view-singel-file/view-singel-f
     SearchByTypeComponent,
     UploadComponent,
     AddUserComponent,
-    ViewSingelFileComponent
+    ViewSingelFileComponent,
+    LogInComponent
   ],
   imports: [
     BrowserModule,
