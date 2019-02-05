@@ -18,6 +18,8 @@ export class SearchComponent implements OnInit {
   viewSingelFile:boolean=false;
   SelectedFile:File;
 
+
+
   resource:File[]=[
     {
     resourceCode: 1,
@@ -48,13 +50,58 @@ export class SearchComponent implements OnInit {
   },
   {
     resourceCode: 4,
-    resourceName:'ccc.nyy',
+    resourceName:'ccc.jpg',
     filePath:'sdfsdfetr34rc34t4c',
     version:'ewfwrferfe',
     authorName:'sfdsfsd',
     date:new Date('2014-04-03'),
     resourcePermission:2
-  }
+  },
+  {
+    resourceCode: 5,
+    resourceName:'dfghtgt.docx',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:2
+  },
+  {
+    resourceCode: 6,
+    resourceName:'fghhccc.pdf',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:2
+  },
+  {
+    resourceCode: 7,
+    resourceName:'cctttc.jpg',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:2
+  },
+  {
+    resourceCode: 8,
+    resourceName:'cdfgfghcc.jpg',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:2
+  },
+  {
+    resourceCode: 9,
+    resourceName:'cttttcc.pdf',
+    filePath:'sdfsdfetr34rc34t4c',
+    version:'ewfwrferfe',
+    authorName:'sfdsfsd',
+    date:new Date('2014-04-03'),
+    resourcePermission:2
+  },
 ];
 
   ChangingValue(value:string){

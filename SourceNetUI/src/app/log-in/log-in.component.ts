@@ -24,5 +24,6 @@ export class LogInComponent implements OnInit {
         this.isLogIn=1;
         this.eLogIn.emit(this.isLogIn);
     }
+    alert("!!!");
   }
 }

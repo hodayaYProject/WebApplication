@@ -1,10 +1,50 @@
 <div class="container">
+   <div class="row" dir="rtl">
+      <div class="col-sm-6"> 
+         <form dir="rtl">
+      
+               <div class="form-group row">
+                  <label for="code" class="col-sm-4">קוד קובץ:</label>
+                  <input type="text" class="form-control col-sm-6" id="code" placeholder="{{SingelFile.resourceCode}}" name="code" disabled>
+               </div>
 
-   <p>קוד קובץ: {{SingelFile.resourceCode}}</p>
-   <p>שם קובץ: {{SingelFile.resourceName}}</p>
-   <p>גרסה: {{SingelFile.version}}</p>
-   <p>שם מחבר: {{SingelFile.authorName}}</p>
-   <p>תאריך: {{SingelFile.date}}</p>
-   <p>הרשאת קובץ: {{SingelFile.resourcePermission}}</p>
+               <div class="form-group row">
+                 <label for="name" class="col-sm-4">שם קובץ:</label>
+                 <input type="text" class="form-control col-sm-6" id="name" placeholder="{{SingelFile.resourceName}}" name="name" disabled>
+               </div>
+         
+               <div class="form-group row">
+                 <label for="version" class="col-sm-4">גרסה:</label>
+                 <input type="text" class="form-control col-sm-6" id="version" placeholder="{{SingelFile.version}}" name="version" disabled>
+               </div>
+         
+               <div class="form-group row">
+                   <label for="authorName" class="col-sm-4">שם מחבר:</label>
+                   <input type="text" class="form-control col-sm-6" id="authorName" placeholder="{{SingelFile.authorName}}" name="authorName" disabled>
+               </div>
+               <div class="form-group row">
+                  <label for="date" class="col-sm-4">תאריך:</label>
+                  <input type="text" class="form-control col-sm-6" id="date" placeholder="{{SingelFile.date}}" name="date" disabled>
+               </div>
 
+               <div class="form-group row">
+                  <label for="resourcePermission" class="col-sm-4">הרשאת קובץ:</label>
+                  <input type="text" class="form-control col-sm-6" id="resourcePermission" placeholder="{{SingelFile.resourcePermission}}" name="resourcePermission" disabled>
+               </div>
+         
+               <div class="row buttons">
+                  <button type="button" class="btn col-sm-2">קריאה</button>
+                  <button type="button" class="btn col-sm-2">צפיה</button>
+                  <button type="button" class="btn col-sm-2">הורדה</button>
+               </div>
+             </form>
+         
+      </div>
+
+
+
+      <div class="col-sm-6">
+         <img src="../../assets/pictures/jpg.jpg" width="300" />
+      </div>>
+   </div>
 </div>

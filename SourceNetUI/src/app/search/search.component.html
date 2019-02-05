@@ -24,9 +24,25 @@
 
       <div dir="rtl" class="row">
         <div *ngFor="let res of resource" class="file">
-            <button type="button" (click)="singelFile(res)">
+            <button class="btnFile" type="button" (click)="singelFile(res)" [ngSwitch]="res.resourceName">
                 <p>{{res.resourceName}}</p>
-                <img src="../pictures/pdf.jpg" width="200"/>
+                
+                <div *ngIf="res.resourceName.includes('.jpg')">
+                    <img src="../../assets/pictures/jpg.jpg" />
+                </div>>
+
+                <div *ngIf="res.resourceName.includes('.pdf')">
+                    <img src="../../assets/pictures/pdf.jpg" style="margin-top:-20px"/>
+                </div>
+
+                <div *ngIf="res.resourceName.includes('.docx')">
+                    <img src="../../assets/pictures/docx.png" style="margin-top:-20px"/>
+                </div>
+
+                <!--<div *ngSwitchDefault>
+                    <img src="../../assets/pictures/defult.png"/>
+                </div> -->  
+
             </button>
         </div>
       </div>

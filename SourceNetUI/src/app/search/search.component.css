@@ -20,16 +20,16 @@ label{
 }
 
 p{
-    color: black;
+    color: #ffffff;
     text-align:right; 
 }
 
 .file{
     margin: 0 5px;
-    /*border-style: solid;
-    
-    border-color: #d86d16*/
-
+}
+.btnFile{
+    background-color:  rgba(26, 25, 24, 0);
+    border-color: rgba(26, 25, 24, 0);
 }
 
 
